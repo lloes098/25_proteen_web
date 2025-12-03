@@ -1,3 +1,6 @@
+import Link from "next/link";
+import Footer from "./components/Footer";
+
 export default function Home() {
   return (
     <div className="min-h-screen">
@@ -180,47 +183,28 @@ export default function Home() {
       </section>
 
       {/* 일곱 번째 섹션 - CTA 섹션 (노란색) */}
-      <section className="w-full bg-yellow-400 min-h-[50vh] flex items-center justify-center relative overflow-hidden">
+      <section className="w-full text-white bg-blue-600 min-h-[50vh] flex items-center justify-center relative overflow-hidden">
         <div className="container mx-auto px-4 py-16 relative z-10">
           <div className="flex flex-col items-center gap-8 text-center">
-            <p className="text-xl md:text-2xl text-black font-medium">
+            <p className="text-xl md:text-2xl text-white font-medium">
               지금 바로 지원하세요.
             </p>
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-black">
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white">
               PROTEEN
             </h2>
             <div className="flex flex-col sm:flex-row gap-4 mt-4">
               <button className="bg-white text-black px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-colors">
                 지원하기
               </button>
-              <button className="bg-black text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-800 transition-colors">
+              <Link href="/camp-intro" className="bg-black text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-gray-800 transition-colors text-center">
                 캠프 과정 자세히 보기
-              </button>
+              </Link>
             </div>
           </div>
         </div>
-        
-        {/* 장식 요소들 */}
-        <div className="absolute top-8 right-8 text-black text-2xl opacity-20">💬</div>
-        <div className="absolute top-24 right-16 text-orange-500 text-3xl opacity-30">⚙️</div>
-        <div className="absolute bottom-16 left-8 text-blue-500 text-3xl opacity-30">↑</div>
-        <div className="absolute bottom-8 left-24 bg-green-500 text-white px-4 py-2 rounded-lg text-sm opacity-30">$ Go</div>
       </section>
 
-      {/* 푸터 */}
-      <footer className="w-full bg-black py-8">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="flex flex-col md:flex-row gap-4 text-white text-sm">
-              <a href="#" className="hover:text-gray-400 transition-colors">개인정보 처리 방침</a>
-            </div>
-            <p className="text-white text-sm">
-              © PROTEEN. All rights reserved.
-            </p>
-            <div className="text-yellow-400 text-xl">Ch</div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

@@ -28,6 +28,9 @@ export default function Header() {
           PROTEEN
         </a>
         <div className="flex items-center gap-6">
+          <a href="/proteen-intro" className="text-white hover:text-gray-300 transition-colors font-bold">
+            프로틴 소개
+          </a>
           <a href="/camp-intro" className="text-white hover:text-gray-300 transition-colors font-bold">
             캠프 소개
           </a>
@@ -37,7 +40,7 @@ export default function Header() {
             rel="noopener noreferrer"
             className="px-4 py-2 rounded-lg bg-white/20 text-white hover:bg-white/30 transition-colors font-bold"
           >
-            인스타그램
+            인스타그램 추가
           </a>
         </div>
       </div>
